@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"ashestar.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="这里记录一下我使用macOS时做的一些配置。">
+  <meta name="description" content="这里记录一下我使用 macOS 时做的一些配置。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS配置">
 <meta property="og:url" content="https://ashestar.github.io/2021/05/29/macOS%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Gone With the Wind">
-<meta property="og:description" content="这里记录一下我使用macOS时做的一些配置。">
+<meta property="og:description" content="这里记录一下我使用 macOS 时做的一些配置。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-05-29T13:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-25T11:33:25.854Z">
+<meta property="article:modified_time" content="2021-08-28T14:52:19.749Z">
 <meta property="article:author" content="谂独">
 <meta property="article:tag" content="配置">
 <meta name="twitter:card" content="summary">
@@ -136,7 +136,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">17</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">18</span></a>
 
   </li>
   </ul>
@@ -197,7 +197,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-08-25 19:33:25" itemprop="dateModified" datetime="2021-08-25T19:33:25+08:00">2021-08-25</time>
+                <time title="修改时间：2021-08-28 22:52:19" itemprop="dateModified" datetime="2021-08-28T22:52:19+08:00">2021-08-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -220,10 +220,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>这里记录一下我使用macOS时做的一些配置。</p>
+        <p>这里记录一下我使用 macOS 时做的一些配置。</p>
 <span id="more"></span>
 
-<h1 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h1><p>​    Homebrew 是mac的包管理器，仅需执行相应的命令,就能下载安装需要的软件包，可以省掉自己去下载、解压、拖拽(安装)等繁琐的步骤。</p>
+<h1 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h1><p>​ Homebrew 是 mac 的包管理器，仅需执行相应的命令,就能下载安装需要的软件包，可以省掉自己去下载、解压、拖拽(安装)等繁琐的步骤。</p>
 <blockquote>
 <p>Homebrew 官方文档 <a target="_blank" rel="noopener" href="https://brew.sh/">https://brew.sh/</a></p>
 </blockquote>
@@ -232,7 +232,7 @@
 <p>可能会报 <code>bash curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused</code> 错误，建议换成 brew 镜像安装脚本。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/bin/bash -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>​    Homebrew 安装软件时非常慢。为了提升安装速度，需要更改 Homebrew 的安装源，将其替换成国内镜像。<br>​    这里用的是由中科大负责托管维护的 Homebrew 镜像。其中，前两个为必须配置的项目，后两个可按需配置。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>​ Homebrew 安装软件时非常慢。为了提升安装速度，需要更改 Homebrew 的安装源，将其替换成国内镜像。<br>​ 这里用的是由中科大负责托管维护的 Homebrew 镜像。其中，前两个为必须配置的项目，后两个可按需配置。</p>
 <ul>
 <li><p>替换 brew.git ：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git -C <span class="string">&quot;<span class="subst">$(brew --repo)</span>&quot;</span> remote set-url origin https://mirrors.ustc.edu.cn/brew.git</span><br></pre></td></tr></table></figure></li>
@@ -242,35 +242,35 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git -C <span class="string">&quot;<span class="subst">$(brew --repo homebrew/cask)</span>&quot;</span> remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</span><br></pre></td></tr></table></figure></li>
 <li><p>替换 homebrew-bottles ：</p>
 <p>根据使用的终端修改。</p>
-<p>若是bash，则执行：</p>
+<p>若是 bash，则执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&#x27;</span> &gt;&gt; ~/.bash_profile</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
 
-<p>若是zsh，则执行：</p>
+<p>若是 zsh，则执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&#x27;</span> &gt;&gt; ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
 
-<p>这样Homebrew配置就完成了</p>
+<p>这样 Homebrew 配置就完成了</p>
 </li>
 </ul>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 查询：</span><br><span class="line">brew search 软件名</span><br><span class="line">// 安装：</span><br><span class="line">brew install 软件名</span><br><span class="line">// 卸载：</span><br><span class="line">brew uninstall 软件名</span><br><span class="line">// 更新 Homebrew：</span><br><span class="line">brew update </span><br><span class="line">// 查看 Homebrew 配置信息：</span><br><span class="line">brew config </span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 查询：</span><br><span class="line">brew search 软件名</span><br><span class="line">// 安装：</span><br><span class="line">brew install 软件名</span><br><span class="line">// 卸载：</span><br><span class="line">brew uninstall 软件名</span><br><span class="line">// 更新 Homebrew：</span><br><span class="line">brew update</span><br><span class="line">// 查看 Homebrew 配置信息：</span><br><span class="line">brew config</span><br></pre></td></tr></table></figure>
 
-<p>使用官方脚本同样会遇到uninstall地址无法访问问题，可以替换为下面脚本：</p>
+<p>使用官方脚本同样会遇到 uninstall 地址无法访问问题，可以替换为下面脚本：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/bin/bash -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/uninstall)</span>&quot;</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="配置使用zsh和oh-my-zsh"><a href="#配置使用zsh和oh-my-zsh" class="headerlink" title="配置使用zsh和oh-my-zsh"></a>配置使用zsh和oh-my-zsh</h1><p>Mac 终端默认 shell 为 bash，可配置为其他，我更喜欢zsh一点。</p>
-<p>查看当前使用的shell</p>
+<h1 id="配置使用-zsh-和-oh-my-zsh"><a href="#配置使用-zsh-和-oh-my-zsh" class="headerlink" title="配置使用 zsh 和 oh-my-zsh"></a>配置使用 zsh 和 oh-my-zsh</h1><p>Mac 终端默认 shell 为 bash，可配置为其他，我更喜欢 zsh 一点。</p>
+<p>查看当前使用的 shell</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$SHELL</span></span><br></pre></td></tr></table></figure>
 
-<p>查看安装的shell</p>
+<p>查看安装的 shell</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/shells</span><br></pre></td></tr></table></figure>
 
-<h2 id="安装zsh"><a href="#安装zsh" class="headerlink" title="安装zsh"></a>安装zsh</h2><p>执行：</p>
+<h2 id="安装-zsh"><a href="#安装-zsh" class="headerlink" title="安装 zsh"></a>安装 zsh</h2><p>执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install zsh</span><br></pre></td></tr></table></figure>
 
-<p>切换终端为zsh：</p>
+<p>切换终端为 zsh：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh -s /bin/zsh</span><br></pre></td></tr></table></figure>
 
-<p>重启终端即可使用zsh</p>
-<h2 id="安装oh-my-zsh"><a href="#安装oh-my-zsh" class="headerlink" title="安装oh-my-zsh"></a>安装oh-my-zsh</h2><p>执行：</p>
+<p>重启终端即可使用 zsh</p>
+<h2 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh-my-zsh"></a>安装 oh-my-zsh</h2><p>执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>打开配置文件，可配置主题等</p>
@@ -279,10 +279,10 @@
 <p>更新配置</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
 
-<p>查看zsh的主题，<a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">oh-my-zsh Themes</a></p>
+<p>查看 zsh 的主题，<a target="_blank" rel="noopener" href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes">oh-my-zsh Themes</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.oh-my-zsh/themes &amp;&amp; ls</span><br></pre></td></tr></table></figure>
 
-<p>查看当前使用主题名称（设置主题为random时可查看当前随机到的主题名称）</p>
+<p>查看当前使用主题名称（设置主题为 random 时可查看当前随机到的主题名称）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$ZSH_THEME</span></span><br></pre></td></tr></table></figure>
 
 <p>查看自带插件</p>
@@ -298,13 +298,13 @@
 <p>这是由于 <code>/usr/local/share/zsh</code> <code>/usr/local/share/zsh/site-functions</code> 这两个目录没有权限，给这个两个目录赋权就可以了。<a target="_blank" rel="noopener" href="https://github.com/robbyrussell/oh-my-zsh/issues/6835">issue</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /usr/<span class="built_in">local</span>/share/zsh</span><br><span class="line"></span><br><span class="line">chmod 755 /usr/<span class="built_in">local</span>/share/zsh/site-functions</span><br></pre></td></tr></table></figure>
 
-<h1 id="配置使用Git"><a href="#配置使用Git" class="headerlink" title="配置使用Git"></a>配置使用Git</h1><p>查看用户名和邮箱</p>
+<h1 id="配置使用-Git"><a href="#配置使用-Git" class="headerlink" title="配置使用 Git"></a>配置使用 Git</h1><p>查看用户名和邮箱</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br><span class="line"></span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
 
 <p>配置用户名和邮箱</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line"></span><br><span class="line">git config --global user.email <span class="string">&quot;email&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>查看配置文件的位置，Git会优先使用库级别的配置，再然后是global级别的配置，最后是system级别的配置</p>
+<p>查看配置文件的位置，Git 会优先使用库级别的配置，再然后是 global 级别的配置，最后是 system 级别的配置</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /etc/gitconfig</span></span><br><span class="line"><span class="comment"># 系统级别的配置，适用于所有的用户和所有的库，存储在Git安装目录下，可以使用如下开头指令指定和修改</span></span><br><span class="line">git config --system</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/.gitconfig</span></span><br><span class="line"><span class="comment"># 用户级别的配置，适用于当前登录的用户，存储在用户目录下，可以使用如下开头指令指定和修改</span></span><br><span class="line">git config --gloabal</span><br></pre></td></tr></table></figure>
@@ -318,7 +318,7 @@
 </li>
 <li><p>终端执行如下两条指令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">defaults write com.apple.systempreferences AttentionPrefBundleIDs 0</span><br><span class="line"></span><br><span class="line">killall Dock</span><br></pre></td></tr></table></figure></li>
-<li><p>屏蔽网络访问，编辑host文件</p>
+<li><p>屏蔽网络访问，编辑 host 文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 	swscan.apple.com</span><br><span class="line">127.0.0.1 	swcdn.apple.com</span><br><span class="line">127.0.0.1 	swdist.apple.com</span><br></pre></td></tr></table></figure></li>
 </ol>
 </li>
@@ -327,9 +327,9 @@
 <li><p>快捷键 command+shift+.</p>
 </li>
 <li><p>命令行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 显示文件夹</span></span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles TRUE</span><br><span class="line"><span class="comment"># 重启finder</span></span><br><span class="line">killall Finder</span><br><span class="line"></span><br><span class="line"><span class="comment"># 隐藏文件夹</span></span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles FALSE</span><br><span class="line"><span class="comment"># 重启finder</span></span><br><span class="line">killall Finder</span><br></pre></td></tr></table></figure></li>
-</ol>
 </li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 显示文件夹</span></span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles TRUE</span><br><span class="line"><span class="comment"># 重启finder</span></span><br><span class="line">killall Finder</span><br><span class="line"></span><br><span class="line"><span class="comment"># 隐藏文件夹</span></span><br><span class="line">defaults write com.apple.finder AppleShowAllFiles FALSE</span><br><span class="line"><span class="comment"># 重启finder</span></span><br><span class="line">killall Finder</span><br></pre></td></tr></table></figure></li>
 </ul>
 
     </div>
@@ -415,7 +415,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Homebrew"><span class="nav-number">1.</span> <span class="nav-text">Homebrew</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8zsh%E5%92%8Coh-my-zsh"><span class="nav-number">2.</span> <span class="nav-text">配置使用zsh和oh-my-zsh</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85zsh"><span class="nav-number">2.1.</span> <span class="nav-text">安装zsh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85oh-my-zsh"><span class="nav-number">2.2.</span> <span class="nav-text">安装oh-my-zsh</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8Git"><span class="nav-number">3.</span> <span class="nav-text">配置使用Git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tips"><span class="nav-number">4.</span> <span class="nav-text">Tips</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Homebrew"><span class="nav-number">1.</span> <span class="nav-text">Homebrew</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.</span> <span class="nav-text">使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8-zsh-%E5%92%8C-oh-my-zsh"><span class="nav-number">2.</span> <span class="nav-text">配置使用 zsh 和 oh-my-zsh</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-zsh"><span class="nav-number">2.1.</span> <span class="nav-text">安装 zsh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-oh-my-zsh"><span class="nav-number">2.2.</span> <span class="nav-text">安装 oh-my-zsh</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%BD%BF%E7%94%A8-Git"><span class="nav-number">3.</span> <span class="nav-text">配置使用 Git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tips"><span class="nav-number">4.</span> <span class="nav-text">Tips</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -431,7 +431,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
